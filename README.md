@@ -45,5 +45,9 @@ First we need to prepare our images. I will highlight borders with some filters.
 ### Using area to understand which brick is a part:
 
 We can calculate with cv2.contourArea and then take average from all areas. I choosed average area from ALL bricks because on the corners and due to wide angles
-there might be mistakes, but bricks that are fully visible can influence on our average to make coefficient more believable and of course we need a trashhold coeffcient.
+there might be mistakes, but bricks that are fully visible can influence on our average and to make coefficient more believable. 
+For example, for image that have a nearly perpendicular wall photo (first image), if bricks were squares and we want trashhold by x-lenght by chossing coefficient = 0.75
+(x-lenght< 0.75avg) in areas it would be 0.05625, so adding some value to 0.05625 we can get a coefficient that fits. But, of course we need a trashhold coeffcient.
+
+and 
 
