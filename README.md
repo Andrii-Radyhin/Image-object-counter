@@ -6,7 +6,7 @@ We need a clear understanding of what is fully visible. I guess that for paving 
 
 1) Assume that it's the same as for paving stones.
 2) Bricks have a wide and narrow side, but it's rotated in the corners and at the joints for a better connection, so we can see only the smaller side of the brick. Another solution would be to detect only bricks with visible wider sides and other as parts. I choosed this option.
-3) 
+
 Here are some images to understand geometrically:
 
 ![alt text](images/Corner.PNG)
