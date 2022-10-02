@@ -1,17 +1,17 @@
 # Internship-Description-Task-2
 
-Abstract: This task need more research for wide angle. But with selection of the parameters it works in our case. Below is my suggestion not to select parameters by hands.
+Abstract: This task needs more research on wide angles. But with our selection of the parameters, it works in our case. Below is my suggestion not to select parameters by hand.
 
-We need clear understanding what is fully visible parts. I guess that for paving stone is exact what we can see, but for wall bricks there might be some cases:
+We need a clear understanding of what is fully visible. I guess that for paving stone is exact what we can see, but for wall bricks there might be some cases:
 
 1) Assume that it's the same as for paving stones.
-2) Bricks have a wide and narrow side, but it's rotated in the corners and at the joints for a better connection, so we can see only smaller side of the brick. If we want to detect only bricks with visible wider side and other as parts there would be another solution. I choosed this option.
-
-Here is some images to understand geometrically:
+2) Bricks have a wide and narrow side, but it's rotated in the corners and at the joints for a better connection, so we can see only the smaller side of the brick. Another solution would be to detect only bricks with visible wider sides and other as parts. I choosed this option.
+3) 
+Here are some images to understand geometrically:
 
 ![alt text](images/results.PNG)
 
-For this image is the same situation, two bricks that can have parts inside wall:
+For this image, it is the same situation: two bricks that can have parts inside a wall:
 
 ![alt text](images/results.PNG)
 
@@ -19,7 +19,7 @@ For this image is the same situation, two bricks that can have parts inside wall
 
 I will use opencv for this task, due to [cv2.findContours](https://docs.opencv.org/4.x/d3/dc0/group__imgproc__shape.html#gadf1ad6a0b82947fa1fe3c3d497f260e0)
 
-First we need to prepare our images. I will highlight borders with some filters.
+First, we need to prepare our images. I will highlight borders using some filters.
 
 1) Convert image into grayscale image.
 
@@ -44,11 +44,9 @@ First we need to prepare our images. I will highlight borders with some filters.
 
 ### Using area to understand which brick is a part:
 
-We can calculate with cv2.contourArea and then take average from all areas. I choosed average area from ALL bricks because on the corners and due to wide angles
-there might be mistakes, but bricks that are fully visible can influence on our average to make area coefficient more believable.
+We can use cv2.contourArea to calculate the average of all areas. I choosed the average area from ALL bricks because, on the corners and due to wide angles, there might be mistakes, but bricks that are fully visible can influence our average to make the area coefficient more believable.
 
-For example, for image that have a nearly perpendicular wall photo (first image), if bricks were squares and we want trashhold by x-lenght by chossing coefficient = 0.75
-(x-lenght< 0.75avg) in areas it would be 0.05625, so adding some value to 0.05625 we can get a coefficient that fits. So we need a trashhold coeffcient for each image, due to distortion.
+In the first image, for example, if the bricks were squares and we wanted threshold by x-length by selecting a coefficient of 0.75 (x-length 0.75 avg), in areas, it would be 0.05625, so we can get a coefficient that fits by adding some value to 0.05625. So we need a threshold coefficient for each image, due to distortion.
 
 ## Results
 
