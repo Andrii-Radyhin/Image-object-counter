@@ -56,5 +56,20 @@ Total bricks in the image: 54, Parts: 20, Full: 34
 
 ![alt text](images/results.PNG)
 
+Total bricks in the image: 373, Parts: 106, Full: 267
+
+![alt text](images/results.PNG)
+
+Total bricks in the image: 84, Parts: 20, Full: 64
+
+![alt text](images/results.PNG)
+
+Total bricks in the image: 95, Parts: 25, Full: 70
+
+![alt text](images/results.PNG)
 
 
+## Solution report
+At the end i want to suggest a solution to not select parameters by hands.
+I would create a multiple regression model that takes as input an image of the wall and outputs
+vector with parameters for canny, dilate or even area coefficient, then use this algorithms with a given parameters and perceive, as a predicition, number of bricks for example. In this case we must not forget to check continuity of opencv operations, or we can use numerical gradient: (f(x+h) - f(x))/h
