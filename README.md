@@ -11,7 +11,7 @@ Here are some images to understand geometrically:
 
 ![alt text](images/Corner.PNG)
 
-For this image, it is the same situation: two bricks that can have parts inside a wall:
+For this image, it is the same situation: two bricks that can have parts inside the wall:
 
 ![alt text](images/corner2.png)
 
