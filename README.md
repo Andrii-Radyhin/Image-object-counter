@@ -20,3 +20,26 @@ For this image is the same situation, two bricks that can have parts inside wall
 I will use opencv for this task, due to [cv2.findContours](https://docs.opencv.org/4.x/d3/dc0/group__imgproc__shape.html#gadf1ad6a0b82947fa1fe3c3d497f260e0)
 
 First we need to prepare our images. I will highlight borders with some filters.
+
+1) Convert image into grayscale image.
+
+![alt text](images/results.PNG)
+
+2) Edge detection is required for counting, but first, using GaussianBlur, the image must be blurred to remove noise.
+
+![alt text](images/results.PNG)
+
+3) Now we will detect edges using a canny algorithm
+
+![alt text](images/results.PNG)
+
+4) To make more thicker and visible the edges --> cv2.dilate
+
+
+![alt text](images/results.PNG)
+
+5) And last, use cv2.findContours with algorithms such as: cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE. (Here is also fit cv2.CHAIN_APPROX_SIMPLE) 
+
+![alt text](images/results.PNG)
+
+### Using area to understand which brick is a part:
