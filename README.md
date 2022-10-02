@@ -9,11 +9,11 @@ We need a clear understanding of what is fully visible. I guess that for paving 
 3) 
 Here are some images to understand geometrically:
 
-![alt text](images/results.PNG)
+![alt text](images/Corner.PNG)
 
 For this image, it is the same situation: two bricks that can have parts inside a wall:
 
-![alt text](images/results.PNG)
+![alt text](images/corner2.png)
 
 ## Description of the algorithm
 
@@ -23,24 +23,23 @@ First, we need to prepare our images. I will highlight borders using some filter
 
 1) Convert image into grayscale image.
 
-![alt text](images/results.PNG)
+![alt text](images/gray.jpg)
 
 2) Edge detection is required for counting, but first, using GaussianBlur, the image must be blurred to remove noise.
 
-![alt text](images/results.PNG)
+![alt text](images/blur.jpg)
 
 3) Now we will detect edges using a canny algorithm
 
-![alt text](images/results.PNG)
+![alt text](images/canny.jpg)
 
 4) To make more thicker and visible the edges --> cv2.dilate
 
-
-![alt text](images/results.PNG)
+![alt text](images/dilated.jpg)
 
 5) And last, use cv2.findContours with algorithms such as: cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE. (Here is also fit cv2.CHAIN_APPROX_SIMPLE) 
 
-![alt text](images/results.PNG)
+![alt text](images/rgb_test1.jpg)
 
 ### Using area to understand which brick is a part:
 
@@ -52,19 +51,19 @@ In the first image, for example, if the bricks were squares and we wanted thresh
 
 Total bricks in the image: 54, Parts: 20, Full: 34
 
-![alt text](images/results.PNG)
+![alt text](images/res1.PNG)
 
 Total bricks in the image: 373, Parts: 106, Full: 267
 
-![alt text](images/results.PNG)
+![alt text](images/res2.PNG)
 
 Total bricks in the image: 84, Parts: 20, Full: 64
 
-![alt text](images/results.PNG)
+![alt text](images/res3.PNG)
 
 Total bricks in the image: 95, Parts: 25, Full: 70
 
-![alt text](images/results.PNG)
+![alt text](images/res4.PNG)
 
 
 ## Solution report
