@@ -1,4 +1,4 @@
-# Image-object-counter (Bricks)
+# Image object counter (Bricks)
 
 Abstract: This task needs more research on wide angles. But with our selection of the parameters, it works in our case. Below is my suggestion not to select parameters by hand.
 
