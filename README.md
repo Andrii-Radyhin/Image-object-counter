@@ -2,7 +2,7 @@
 
 Abstract: This task needs more research on wide angles. But with our selection of the parameters, it works in our case. Below is my suggestion not to select parameters by hand.
 
-We need a clear understanding of what is fully visible. I guess that for paving stone is exact what we can see, but for wall bricks there might be some cases:
+We need a clear understanding of what is fully visible brick. I guess that for paving stone is exact what we can see, but for wall bricks there might be some cases:
 
 1) Assume that it's the same as for paving stones.
 2) Bricks have a wide and narrow side, but it's rotated in the corners and at the joints for a better connection, so we can see only the smaller side of the brick. Another solution would be to detect only bricks with visible wider sides and other as parts. I choosed this option.
